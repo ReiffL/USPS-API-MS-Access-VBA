@@ -131,8 +131,13 @@ Sub TestUSPSAddressVerification()
     sReplyJSON = VerifyUSPSAddress(sAccessToken, "111 E Monroe St", "IL", "", "Springfield", "", "")
     Debug.Print sReplyJSON
     
-'   Parse sReplyJSON as needed
+'   Parse sReplyJSON
     Set json = JsonConverter.ParseJson(sReplyJSON)
+
+'   JsonConverter requires VBA-JSON from:
+'   https://github.com/VBA-tools/VBA-JSON
+'   VBA-JSON requires including a reference to "Microsoft Scripting Runtime"
+
     sCity = json("address")("city")
     sState = json("address")("state")
     sZip = json("address")("ZIPCode")
@@ -181,3 +186,4 @@ Sub TestUSPSAddressVerification()
 'The ZIP code is: 62701
 
 End Sub
+
