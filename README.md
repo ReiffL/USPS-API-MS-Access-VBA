@@ -6,5 +6,11 @@ Free for anyone to use in any way they see fit. I was surprised that there were 
 This example is just for address verification, but the same structure would likely work with other USPS APIs. 
 
 This code references the JSON Converter for VBA - Available here
+
 VBA-JSON v2.3.1   (c) Tim Hall - 
+
 https://github.com/VBA-tools/VBA-JSON
+
+VBA-JSON requires including a reference to "Microsoft Scripting Runtime"
+
+(In VBA editor, Tools=>References=> Microsoft Scripting Runtime)
